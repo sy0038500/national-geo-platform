@@ -6,7 +6,7 @@ export default function HeroCarousel() {
     <section className="hero-carousel" aria-label="메인 배너 영역">
       <div className="hero-image-wrapper">
         <img 
-          src="/assets/images/hero.png" 
+          src="assets/images/hero.png" 
           alt="국토정보플랫폼 성곽길 전경" 
           className="hero-main-img" 
         />
