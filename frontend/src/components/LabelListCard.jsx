@@ -17,7 +17,7 @@ export default function LabelListCard({ label, description, link = '#' }) {
         
         {/* 우측 화살표 아이콘 */}
         <div className="l-card-icon-area" aria-hidden="true">
-          <img src="/assets/images/자료실섹션_화살표.png" alt="" className="l-card-arrow-icon" />
+          <img src="/national-geo-platform/assets/images/archive-arrow.png" alt="" className="l-card-arrow-icon" />
         </div>
       </a>
     </article>
