@@ -18,7 +18,7 @@ export default function Header() {
         {/* 로고 영역 */}
         <a href="/" className="logo-area" aria-label="국토지리정보원 국토정보플랫폼 홈으로 이동">
           <div className="logo-symbol" aria-hidden="true">
-            <img src='/assets/images/로고 아이콘.png' alt='로고아이콘' />
+            <img src='assets/images/로고 아이콘.png' alt='로고아이콘' />
           </div>
           <div className="logo-titles">
             <span className="logo-sub">국토지리정보원</span>

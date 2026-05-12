@@ -36,7 +36,7 @@ export default function FullMenuPage() {
       <header className="menu-top-bar">
         <div className="login-prompt">
           <div className="user-icon-bg">
-             <img src="/assets/images/로그인_아이콘.png" alt="user" className="user-icon-img" />
+             <img src="assets/images/로그인_아이콘.png" alt="user" className="user-icon-img" />
           </div>
           <h1 className="login-text">로그인을 해주세요.</h1>
         </div>
@@ -76,7 +76,7 @@ export default function FullMenuPage() {
       {/* 4. 푸터 로고 (아이콘 추가) */}
       <footer className="menu-page-footer">
         <div className="footer-logo-area">
-          <img src="/assets/images/로고 아이콘.png" alt="logo" className="footer-mini-logo" />
+          <img src="assets/images/로고 아이콘.png" alt="logo" className="footer-mini-logo" />
           <div className="footer-logo-text">
             <span className="footer-logo-sub">국토지리정보원</span>
             <strong className="footer-logo-main">국토정보플랫폼</strong>
