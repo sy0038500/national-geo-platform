@@ -1,0 +1,43 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-background-light);
+}
+
+/* 최상위 뷰포트 가로폭을 피그마 모바일 레이아웃처럼 깔끔하게 제어 */
+main {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.focus-skip:focus {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  clip: auto;
+  margin: 0;
+  padding: 16px;
+  background-color: var(--color-text-main);
+  color: var(--color-background-white);
+  z-index: 9999;
+  text-align: center;
+  font-weight: 700;
+  font-size: var(--font-size-base);
+}
+
+.app-footer {
+  background-color: var(--color-background-white);
+  border-top: 1px solid var(--color-border);
+  padding: 24px 16px;
+  text-align: center;
+  color: var(--color-text-sub);
+  font-size: var(--font-size-base); /* 최소 16px */
+}
+
+.footer-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}

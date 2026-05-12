@@ -1,0 +1,112 @@
+.vertical-card {
+  width: 100%; /* 부모 그리드에 맞춤 */
+  background-color: var(--color-background-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.vertical-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.v-card-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px;
+  height: 100%;
+  color: var(--color-text-main);
+  text-decoration: none;
+  text-align: center;
+  min-height: 44px;
+}
+
+.v-card-icon-wrapper {
+  width: 120px; /* 아이콘 크기 추가 확대 */
+  height: 120px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .v-card-icon-wrapper {
+    width: 72px;
+    height: 72px;
+  }
+}
+
+.vertical-card:hover .v-card-icon-wrapper {
+  transform: scale(1.1);
+}
+
+.v-card-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.v-card-title {
+  font-size: 24px; /* 제목 추가 확대 */
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--color-text-main);
+}
+
+.v-card-desc {
+  font-size: 18px; /* 설명 추가 확대 */
+  color: var(--color-text-sub);
+  line-height: 1.6;
+  word-break: keep-all;
+  margin: 0;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .v-card-title { font-size: 16px; }
+  .v-card-desc { font-size: 14px; }
+}
+
+.scroll-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+  grid-column: 1 / -1; /* 부모 그리드의 모든 칸을 차지하게 함 */
+}
+
+@media (max-width: 600px) {
+  .scroll-row {
+    display: flex; /* 모바일에서만 가로 스크롤 허용 */
+    overflow-x: auto;
+    gap: 16px;
+    padding-bottom: 20px;
+  }
+  .vertical-card {
+    min-width: 150px;
+  }
+}
+
+.scroll-row::-webkit-scrollbar {
+  height: 4px;
+}
+
+.scroll-row::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 2px;
+}
+
+.scroll-row::-webkit-scrollbar-thumb {
+  background: var(--color-primary-light);
+  border-radius: 2px;
+}

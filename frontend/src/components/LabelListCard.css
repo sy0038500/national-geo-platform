@@ -1,0 +1,79 @@
+.label-list-card {
+  width: 100%;
+  background-color: var(--color-background-white);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.label-list-card:hover {
+  transform: translateX(4px);
+  background-color: var(--color-primary-light);
+}
+
+.l-card-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 12px;
+  color: var(--color-text-main);
+  text-decoration: none;
+  min-height: 44px; /* 웹 접근성 터치 영역 보장 */
+}
+
+.l-card-badge-area {
+  flex-shrink: 0;
+  width: 110px;
+  display: flex;
+  justify-content: center;
+}
+
+.l-card-badge {
+  background-color: #1b5e20; /* 짙은 녹색 라벨 */
+  color: var(--color-background-white);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 8px 10px;
+  border-radius: 6px;
+  text-align: center;
+  width: 100%;
+  word-break: keep-all;
+  line-height: 1.2;
+}
+
+.l-card-desc-area {
+  flex-grow: 1;
+}
+
+.l-card-desc {
+  font-size: 18px;
+  color: var(--color-text-sub);
+  line-height: 1.5;
+  word-break: keep-all;
+  margin: 0;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .l-card-badge-area { width: 80px; }
+  .l-card-badge { font-size: 13px; }
+  .l-card-desc { font-size: 15px; }
+}
+
+.l-card-icon-area {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.l-card-arrow-icon {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+
+.label-list-card:hover .l-card-icon-area {
+  transform: translateX(4px);
+}
