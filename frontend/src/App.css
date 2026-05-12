@@ -41,3 +41,25 @@ main {
   max-width: 600px;
   margin: 0 auto;
 }
+
+/* 자료실 타이틀 영역 및 화살표 스타일 */
+.archive-title-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.archive-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text-main);
+}
+
+.archive-arrow {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  display: block;
+}
