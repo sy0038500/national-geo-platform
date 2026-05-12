@@ -18,11 +18,6 @@ export default function QuickMenuSection() {
           <h2 id="quick-menu-title" className="quick-menu-title">
             공간정보받기 및 업무지원
           </h2>
-          <img 
-          src="/national-geo-platform/assets/images/hero.png" 
-          alt="국토정보플랫폼 성곽길 전경" 
-          className="hero-main-img" 
-        />
         </div>
       </div>
       

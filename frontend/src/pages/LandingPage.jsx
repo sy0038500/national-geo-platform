@@ -98,6 +98,10 @@ function LandingPage() {
           subtitle="가치 있는 공간정보와 관련 간행물 등의 다양한 자료를 소개하고 다운로드 서비스를 제공합니다."
           bgImageUrl={bgArchive}
         >
+          <div className="archive-title-area">
+            <h2 className="archive-title">자료실</h2>
+            <img src="/national-geo-platform/assets/images/archive-arrow.png" alt="" className="archive-arrow" aria-hidden="true" />
+          </div>
           {archiveData.map(item => (
             <LabelListCard key={item.id} label={item.label} description={item.desc} />
           ))}
