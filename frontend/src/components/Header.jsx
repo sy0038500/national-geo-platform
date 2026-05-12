@@ -3,10 +3,10 @@ import './Header.css';
 import { useNavigate } from 'react-router-dom';
 
 const desktopMenus = [
-  { id: 'sitemap', label: '사이트맵', icon: '/assets/images/사이트맵_아이콘.png' },
-  { id: 'guide', label: '이용안내', icon: '/assets/images/이용가이드_아이콘.png' },
-  { id: 'login', label: '로그인', icon: '/assets/images/로그인_아이콘.png' },
-  { id: 'join', label: '회원가입', icon: '/assets/images/회원가입_아이콘.png' },
+  { id: 'sitemap', label: '사이트맵', icon: '/national-geo-platform/assets/images/sitemap-icon.png' },
+  { id: 'guide', label: '이용안내', icon: '/national-geo-platform/assets/images/guide-icon.png' },
+  { id: 'login', label: '로그인', icon: '/national-geo-platform/assets/images/login-icon.png' },
+  { id: 'join', label: '회원가입', icon: '/national-geo-platform/assets/images/join-icon.png' },
 ];
 
 export default function Header() {
@@ -18,7 +18,7 @@ export default function Header() {
         {/* 로고 영역 */}
         <a href="/" className="logo-area" aria-label="국토지리정보원 국토정보플랫폼 홈으로 이동">
           <div className="logo-symbol" aria-hidden="true">
-            <img src='assets/images/로고 아이콘.png' alt='로고아이콘' />
+            <img src='/national-geo-platform/assets/images/logo-icon.png' alt='로고아이콘' />
           </div>
           <div className="logo-titles">
             <span className="logo-sub">국토지리정보원</span>
