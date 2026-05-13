@@ -151,3 +151,71 @@
     font-size: 12px;
   }
 }
+
+.desktop-menu-button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+}
+
+.login-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.48);
+}
+
+.login-modal {
+  position: relative;
+  width: min(420px, 100%);
+  padding: 40px 32px 32px;
+  border-radius: 20px;
+  background: #5f6368;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+}
+
+.login-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  border: 0;
+  background: transparent;
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.login-modal-title {
+  margin: 0 0 12px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.login-modal-message {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media (max-width: 767px) {
+  .login-modal {
+    padding: 36px 24px 28px;
+    border-radius: 16px;
+  }
+
+  .login-modal-title {
+    font-size: 21px;
+  }
+
+  .login-modal-message {
+    font-size: 15px;
+  }
+}
