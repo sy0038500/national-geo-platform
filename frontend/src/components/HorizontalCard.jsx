@@ -4,7 +4,13 @@ import './HorizontalCard.css';
 export default function HorizontalCard({ title, description, imageUrl, link = '#' }) {
   return (
     <article className="horizontal-card">
-      <a href={link} className="h-card-link" aria-label={`${title} 상세 보기`}>
+      <a 
+        href={link} 
+        className="h-card-link" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        aria-label={`${title} 상세 보기 (새창 열림)`}
+      >
         {/* 좌측 썸네일 이미지 */}
         <div className="h-card-img-area">
           <img src={imageUrl} alt="" className="h-card-img" aria-hidden="true" />

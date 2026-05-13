@@ -4,7 +4,13 @@ import './VerticalCard.css';
 export default function VerticalCard({ title, description, imageUrl, link = '#' }) {
   return (
     <article className="vertical-card">
-      <a href={link} className="v-card-link" aria-label={`${title} 서비스로 이동`}>
+      <a 
+        href={link} 
+        className="v-card-link" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        aria-label={`${title} 서비스로 이동 (새창 열림)`}
+      >
         {/* 상단 아이콘 */}
         <div className="v-card-icon-wrapper">
           <img src={imageUrl} alt="" className="v-card-icon" aria-hidden="true" />
