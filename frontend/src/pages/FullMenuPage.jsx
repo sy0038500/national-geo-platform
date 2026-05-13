@@ -36,7 +36,7 @@ export default function FullMenuPage() {
       <header className="menu-top-bar">
         <div className="login-prompt">
           <div className="user-icon-bg">
-             <img src="/national-geo-platform/assets/images/icon-login.png" alt="user" className="user-icon-img" />
+             <img src="/national-geo-platform/assets/images/login-icon.png" alt="user" className="user-icon-img" />
           </div>
           <h1 className="login-text">로그인을 해주세요.</h1>
         </div>

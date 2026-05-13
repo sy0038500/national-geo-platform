@@ -2,12 +2,12 @@ import React from 'react';
 import './QuickMenuSection.css';
 
 const quickItems = [
-  { id: '1', title: '수치지도', imageUrl: '/national-geo-platform/assets/images/수치지도.svg' },
-  { id: '2', title: '항공사진', imageUrl: '/national-geo-platform/assets/images/항공사진 아이콘.png' },
-  { id: '3', title: '국가기준점', imageUrl: '/national-geo-platform/assets/images/국가기준점 아이콘.png' },
-  { id: '4', title: '종이지도', imageUrl: '/national-geo-platform/assets/images/종이지도 아이콘.png' },
-  { id: '5', title: '국토위성영상', imageUrl: '/national-geo-platform/assets/images/국토위성영상_아이콘.png' },
-  { id: '6', title: '업무지원', imageUrl: '/national-geo-platform/assets/images/업무지원 아이콘.png' },
+  { id: '1', title: '수치지도', imageUrl: '/national-geo-platform/assets/images/digital_map.svg' },
+  { id: '2', title: '항공사진', imageUrl: '/national-geo-platform/assets/images/aerial_photo_icon.png' },
+  { id: '3', title: '국가기준점', imageUrl: '/national-geo-platform/assets/images/national_standard_point_icon.png' },
+  { id: '4', title: '종이지도', imageUrl: '/national-geo-platform/assets/images/paper_map_icon.png' },
+  { id: '5', title: '국토위성영상', imageUrl: '/national-geo-platform/assets/images/national_satellite_imagery_icon.png' },
+  { id: '6', title: '업무지원', imageUrl: '/national-geo-platform/assets/images/work_support_icon.png' },
 ];
 
 export default function QuickMenuSection() {

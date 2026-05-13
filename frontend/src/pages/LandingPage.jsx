@@ -10,34 +10,34 @@ import VerticalCard from '../components/VerticalCard';
 import '../App.css';
 
 // 섹션 배경 이미지 매핑
-const bgInfoMap = "/national-geo-platform/assets/images/국토정보맵_섹션.png";
-const bgSpace = "/national-geo-platform/assets/images/공간정보_섹션.png";
-const bgArchive = "/national-geo-platform/assets/images/자료실_섹션.png";
-const bgSupport = "/national-geo-platform/assets/images/지원서비스_섹션.png";
+const bgInfoMap = "/national-geo-platform/assets/images/national_land_info_map_section.png";
+const bgSpace = "/national-geo-platform/assets/images/spatial_info_section.png";
+const bgArchive = "/national-geo-platform/assets/images/archive_section.png";
+const bgSupport = "/national-geo-platform/assets/images/support_service_section.png";
 
 // 국토정보맵 데이터
 const mapData = [
-  { id: 'm1', title: '통합지도검색', desc: '원하는 정보를 입력하여 지도 기반의 공간정보를 직접 확인하고 수치지도, 항공사진, 정사영상, 기준점 등을 다운로드', img: "assets/images/수치지도.png" },
-  { id: 'm2', title: '국토통계지도', desc: '인구, 건물, 토지 등 200개의 국토지표를 조사 관리하고 정책자료로 활용할 수 있도록 격자 단위 통계 제공', img: "assets/images/국토통계지도.png" },
-  { id: 'm3', title: '북한지도', desc: '북한지역 주요지점에 대한 위치검색 및 시계열 영상정보 제공 서비스', img: "assets/images/북한지도.png" },
-  { id: 'm1', title: '통합지도검색', desc: '원하는 정보를 입력하여 지도 기반의 공간정보를 직접 확인하고 수치지도, 항공사진, 정사영상, 기준점 등을 다운로드', img: "/national-geo-platform/assets/images/수치지도.png" },
-  { id: 'm2', title: '국토통계지도', desc: '인구, 건물, 토지 등 200개의 국토지표를 조사 관리하고 정책자료로 활용할 수 있도록 격자 단위 통계 제공', img: "/national-geo-platform/assets/images/국토통계지도.png" },
-  { id: 'm3', title: '북한지도', desc: '북한지역 주요지점에 대한 위치검색 및 시계열 영상정보 제공 서비스', img: "/national-geo-platform/assets/images/북한지도.png" },
-  { id: 'm4', title: '역사지도', desc: '역사적 정보의 가치 향상과 대국민 역사 콘텐츠 질적향상을 위한 지도 제공 서비스', img: "/national-geo-platform/assets/images/역사지도.png" },
-  { id: 'm5', title: '정밀도로지도', desc: '도로 및 주변시설에 대한 3차원 고정밀 데이터 구축현황 및 다운로드 서비스', img: "/national-geo-platform/assets/images/정밀도로지도.png" },
-  { id: 'm6', title: '사용자참여지도', desc: '사용자가 활용목적에. 따라 다양한 공간정보를 융합하여 분석 및 지도 제작 지원', img: "/national-geo-platform/assets/images/국토정보맵_섹션.png" },
+  { id: 'm1', title: '통합지도검색', desc: '원하는 정보를 입력하여 지도 기반의 공간정보를 직접 확인하고 수치지도, 항공사진, 정사영상, 기준점 등을 다운로드', img: "assets/images/digital_map.png" },
+  { id: 'm2', title: '국토통계지도', desc: '인구, 건물, 토지 등 200개의 국토지표를 조사 관리하고 정책자료로 활용할 수 있도록 격자 단위 통계 제공', img: "assets/images/national_land_statistical_map.png" },
+  { id: 'm3', title: '북한지도', desc: '북한지역 주요지점에 대한 위치검색 및 시계열 영상정보 제공 서비스', img: "assets/images/north_korea_map.png" },
+  { id: 'm1', title: '통합지도검색', desc: '원하는 정보를 입력하여 지도 기반의 공간정보를 직접 확인하고 수치지도, 항공사진, 정사영상, 기준점 등을 다운로드', img: "/national-geo-platform/assets/images/digital_map.png" },
+  { id: 'm2', title: '국토통계지도', desc: '인구, 건물, 토지 등 200개의 국토지표를 조사 관리하고 정책자료로 활용할 수 있도록 격자 단위 통계 제공', img: "/national-geo-platform/assets/images/national_land_statistical_map.png" },
+  { id: 'm3', title: '북한지도', desc: '북한지역 주요지점에 대한 위치검색 및 시계열 영상정보 제공 서비스', img: "/national-geo-platform/assets/images/north_korea_map.png" },
+  { id: 'm4', title: '역사지도', desc: '역사적 정보의 가치 향상과 대국민 역사 콘텐츠 질적향상을 위한 지도 제공 서비스', img: "/national-geo-platform/assets/images/historical_map.png" },
+  { id: 'm5', title: '정밀도로지도', desc: '도로 및 주변시설에 대한 3차원 고정밀 데이터 구축현황 및 다운로드 서비스', img: "/national-geo-platform/assets/images/precise_road_map.png" },
+  { id: 'm6', title: '사용자참여지도', desc: '사용자가 활용목적에. 따라 다양한 공간정보를 융합하여 분석 및 지도 제작 지원', img: "/national-geo-platform/assets/images/national_land_info_map_section.png" },
 ];
 
 // 공간정보 데이터
 const spaceData = [
-  { id: 's1', title: '지도 정보', desc: '일반도, 정밀도로, 고지도 등을 지도로 제공받고 관련 자료를 다운로드', img: "/national-geo-platform/assets/images/수치지도.png" },
-  { id: 's2', title: '국가기준점', desc: '통합기준점, 수준점, 삼각점, 절대중력점 등 국토지리정보원에서 설치·관리하는 국가기준점 정보 제공', img: "/national-geo-platform/assets/images/국가기준점.png" },
-  { id: 's3', title: '국가수직기준연계', desc: '중력측량, 한국 지오이드모델, 육해상 높이 변환 모델 구축 등에 관련한 정보 제공', img: "/national-geo-platform/assets/images/국가기준수직연계.png" },
-  { id: 's4', title: '독도공간정보', desc: '독도에 대한 지리, 현황, 사진 등의 전문적인 정보 제공', img: "/national-geo-platform/assets/images/독도공간정보.png" },
-  { id: 's5', title: '극지공간정보', desc: '극지에 대한 지리, 현황, 사진 등의 전문적인 정보 제공', img: "/national-geo-platform/assets/images/극지공간정보.png" },
-  { id: 's6', title: '국토변화정보', desc: '국토의 변화정보를 신속 정확하게 수집하고 알려 효과적으로 관리하고 활용 가능하도록 하는 서비스', img: "/national-geo-platform/assets/images/공간정보_섹션.png" },
-  { id: 's7', title: '역사지도정보', desc: '대동여지도, 해동지도 등의 역사지도와 관련 자료에 대한 정보 및 다운로드 제공', img: "/national-geo-platform/assets/images/역사지도정보.png" },
-  { id: 's8', title: '위성영상정보', desc: '국토위성으로 촬영한 위성영상을 다운로드하고 다양한 위성정보를 제공', img: "/national-geo-platform/assets/images/국토위성영상.png" },
+  { id: 's1', title: '지도 정보', desc: '일반도, 정밀도로, 고지도 등을 지도로 제공받고 관련 자료를 다운로드', img: "/national-geo-platform/assets/images/digital_map.png" },
+  { id: 's2', title: '국가기준점', desc: '통합기준점, 수준점, 삼각점, 절대중력점 등 국토지리정보원에서 설치·관리하는 국가기준점 정보 제공', img: "/national-geo-platform/assets/images/national_standard_point.png" },
+  { id: 's3', title: '국가수직기준연계', desc: '중력측량, 한국 지오이드모델, 육해상 높이 변환 모델 구축 등에 관련한 정보 제공', img: "/national-geo-platform/assets/images/national_standard_vertical_linkage.png" },
+  { id: 's4', title: '독도공간정보', desc: '독도에 대한 지리, 현황, 사진 등의 전문적인 정보 제공', img: "/national-geo-platform/assets/images/dokdo_spatial_info.png" },
+  { id: 's5', title: '극지공간정보', desc: '극지에 대한 지리, 현황, 사진 등의 전문적인 정보 제공', img: "/national-geo-platform/assets/images/polar_spatial_info.png" },
+  { id: 's6', title: '국토변화정보', desc: '국토의 변화정보를 신속 정확하게 수집하고 알려 효과적으로 관리하고 활용 가능하도록 하는 서비스', img: "/national-geo-platform/assets/images/spatial_info_section.png" },
+  { id: 's7', title: '역사지도정보', desc: '대동여지도, 해동지도 등의 역사지도와 관련 자료에 대한 정보 및 다운로드 제공', img: "/national-geo-platform/assets/images/historical_map_info.png" },
+  { id: 's8', title: '위성영상정보', desc: '국토위성으로 촬영한 위성영상을 다운로드하고 다양한 위성정보를 제공', img: "/national-geo-platform/assets/images/national_satellite_imagery.png" },
   { id: 's9', title: '건물높이공간정보', desc: '건물높이 공간정보 데이터를 다운로드 하고 정보 제공', img: "/national-geo-platform/assets/images/항공사진.jpg" },
 ];
 
@@ -53,10 +53,10 @@ const archiveData = [
 
 // 지원서비스 데이터
 const supportData = [
-  { id: 'sp1', title: '업무지원', desc: '국토지리정보원에서 제공하는 서비스 지원', img: "/national-geo-platform/assets/images/업무지원 아이콘.png" },
-  { id: 'sp2', title: '오픈 API', desc: '사용자가 직접 공간정보와 관련된 응용 서비스 개발', img: "/national-geo-platform/assets/images/오픈api.png" },
-  { id: 'sp3', title: '민원서비스', desc: '국민과 소통을 하기 위한 민원예약, 지도구입, FAQ 등을 제공', img: "/national-geo-platform/assets/images/민원서비스.png" },
-  { id: 'sp4', title: '긴급 공간정보', desc: '재해·재난 발생시 신속하게 활용할 수 있는 긴급 공간정보 서비스', img: "/national-geo-platform/assets/images/긴급공간정보.png" },
+  { id: 'sp1', title: '업무지원', desc: '국토지리정보원에서 제공하는 서비스 지원', img: "/national-geo-platform/assets/images/work_support_icon.png" },
+  { id: 'sp2', title: '오픈 API', desc: '사용자가 직접 공간정보와 관련된 응용 서비스 개발', img: "/national-geo-platform/assets/images/open_api.png" },
+  { id: 'sp3', title: '민원서비스', desc: '국민과 소통을 하기 위한 민원예약, 지도구입, FAQ 등을 제공', img: "/national-geo-platform/assets/images/civil_service.png" },
+  { id: 'sp4', title: '긴급 공간정보', desc: '재해·재난 발생시 신속하게 활용할 수 있는 긴급 공간정보 서비스', img: "/national-geo-platform/assets/images/emergency_spatial_info.png" },
 ];
 
 function LandingPage() {
