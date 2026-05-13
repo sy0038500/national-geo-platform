@@ -20,12 +20,9 @@ const mapData = [
   { id: 'm1', title: '통합지도검색', desc: '원하는 정보를 입력하여 지도 기반의 공간정보를 직접 확인하고 수치지도, 항공사진, 정사영상, 기준점 등을 다운로드', img: "assets/images/digital_map.png", link: 'https://map.ngii.go.kr/ms/map/NlipMap.do' },
   { id: 'm2', title: '국토통계지도', desc: '인구, 건물, 토지 등 200개의 국토지표를 조사 관리하고 정책자료로 활용할 수 있도록 격자 단위 통계 제공', img: "assets/images/national_land_statistical_map.png", link: 'https://map.ngii.go.kr/ms/map/NlipMap.do' },
   { id: 'm3', title: '북한지도', desc: '북한지역 주요지점에 대한 위치검색 및 시계열 영상정보 제공 서비스', img: "assets/images/north_korea_map.png", link: 'https://map.ngii.go.kr/ms/map/NlipMap.do' },
-  { id: 'm1', title: '통합지도검색', desc: '원하는 정보를 입력하여 지도 기반의 공간정보를 직접 확인하고 수치지도, 항공사진, 정사영상, 기준점 등을 다운로드', img: "/national-geo-platform/assets/images/digital_map.png", link: 'https://map.ngii.go.kr/ms/map/NlipMap.do' },
-  { id: 'm2', title: '국토통계지도', desc: '인구, 건물, 토지 등 200개의 국토지표를 조사 관리하고 정책자료로 활용할 수 있도록 격자 단위 통계 제공', img: "/national-geo-platform/assets/images/national_land_statistical_map.png", link: 'https://map.ngii.go.kr/ms/map/NlipMap.do' },
-  { id: 'm3', title: '북한지도', desc: '북한지역 주요지점에 대한 위치검색 및 시계열 영상정보 제공 서비스', img: "/national-geo-platform/assets/images/north_korea_map.png", link: 'https://map.ngii.go.kr/ms/map/NlipMap.do' },
-  { id: 'm4', title: '역사지도', desc: '역사적 정보의 가치 향상과 대국민 역사 콘텐츠 질적향상을 위한 지도 제공 서비스', img: "/national-geo-platform/assets/images/historical_map.png", link: 'https://map.ngii.go.kr/ms/map/OldMap.do' },
+  { id: 'm4', title: '역사지도', desc: '역사적 정보의 가치 향상과 대국민 역사 콘텐츠 질적향상을 위한 지도 제공 서비스', img: "/national-geo-platform/assets/images/historical_map.png", link: 'https://map.ngii.go.kr/ms/map/NlipMap.do?tabGb=daedong' },
   { id: 'm5', title: '정밀도로지도', desc: '도로 및 주변시설에 대한 3차원 고정밀 데이터 구축현황 및 다운로드 서비스', img: "/national-geo-platform/assets/images/precise_road_map.png", link: 'https://map.ngii.go.kr/ms/map/NlipMap.do' },
-  { id: 'm6', title: '사용자참여지도', desc: '사용자가 활용목적에. 따라 다양한 공간정보를 융합하여 분석 및 지도 제작 지원', img: "/national-geo-platform/assets/images/national_land_info_map_section.png", link: 'https://map.ngii.go.kr/ms/map/NlipMap.do' },
+  { id: 'm6', title: '사용자참여지도', desc: '사용자가 활용목적에. 따라 다양한 공간정보를 융합하여 분석 및 지도 제작 지원', img: "/national-geo-platform/assets/images/national_land_info_map_section.png", link: 'https://map.ngii.go.kr/ms/map/userPrtMap.do' },
 ];
 
 // 공간정보 데이터
@@ -43,20 +40,20 @@ const spaceData = [
 
 // 자료실 데이터
 const archiveData = [
-  { id: 'a1', label: '지도자료', desc: '수치지도, 정사영상, 온맵 등의 지도자료를 소개하고 다운로드 받을 수 있는 서비스' },
-  { id: 'a2', label: '근대측량자료', desc: '종이형태로 보관한 근대측량자료를 디지털화하여 E-BOOK 형태로 제공' },
-  { id: 'a3', label: '대한민국 국가지도집', desc: '영토와 국민의 경제, 사회, 문화 활동에 대한 공식적 기록물로 디지털 자료 제공' },
-  { id: 'a4', label: '지리지 및 지명유래집', desc: '연간 발간하는 한국지리지, 한국지명유래집의 디지털 자료 제공' },
-  { id: 'a5', label: '국토 모니터링 보고서', desc: '국토와 관련한 인구, 경제, 사회 등의 국토모니터링 보고서 및 국토조사연감 자료' },
-  { id: 'a6', label: '지명사전', desc: '지명을 검색하거나 이에 대한 용어, 주소, 지명유래 등의 정보를 제공' },
+  { id: 'a1', label: '지도자료', desc: '수치지도, 정사영상, 온맵 등의 지도자료를 소개하고 다운로드 받을 수 있는 서비스', link:'https://map.ngii.go.kr/pd/ctlsSvc/ctlsSvc.do?redirectUrl=https%3A%2F%2Fmap.ngii.go.kr%2Fmn%2FmainPage.do' },
+  { id: 'a2', label: '근대측량자료', desc: '종이형태로 보관한 근대측량자료를 디지털화하여 E-BOOK 형태로 제공',link:'https://map.ngii.go.kr/e-book/search/index.jsp' },
+  { id: 'a3', label: '대한민국 국가지도집', desc: '영토와 국민의 경제, 사회, 문화 활동에 대한 공식적 기록물로 디지털 자료 제공',link:'https://map.ngii.go.kr/ms/pblictn/nationMapBook.do' },
+  { id: 'a4', label: '지리지 및 지명유래집', desc: '연간 발간하는 한국지리지, 한국지명유래집의 디지털 자료 제공',link:'https://map.ngii.go.kr/ms/pblictn/koreaGrphBook.do' },
+  { id: 'a5', label: '국토 모니터링 보고서', desc: '국토와 관련한 인구, 경제, 사회 등의 국토모니터링 보고서 및 국토조사연감 자료',link:'https://map.ngii.go.kr/ms/pblictn/nationalYearBook.do' },
+  { id: 'a6', label: '지명사전', desc: '지명을 검색하거나 이에 대한 용어, 주소, 지명유래 등의 정보를 제공',link:'https://map.ngii.go.kr/ms/nmfpcInfo/nmfpcBeffat.do' },
 ];
 
 // 지원서비스 데이터
 const supportData = [
   { id: 'sp1', title: '업무지원', desc: '국토지리정보원에서 제공하는 서비스 지원', img: "/national-geo-platform/assets/images/work_support_icon.png", link: 'https://map.ngii.go.kr/nw/common/main/mainPage.do' },
-  { id: 'sp2', title: '오픈 API', desc: '사용자가 직접 공간정보와 관련된 응용 서비스 개발', img: "/national-geo-platform/assets/images/open_api.png", link: 'https://map.ngii.go.kr/ms/map/NlipMap.do' },
-  { id: 'sp3', title: '민원서비스', desc: '국민과 소통을 하기 위한 민원예약, 지도구입, FAQ 등을 제공', img: "/national-geo-platform/assets/images/civil_service.png", link: 'https://map.ngii.go.kr/ms/cs/csList.do' },
-  { id: 'sp4', title: '긴급 공간정보', desc: '재해·재난 발생시 신속하게 활용할 수 있는 긴급 공간정보 서비스', img: "/national-geo-platform/assets/images/emergency_spatial_info.png", link: 'https://map.ngii.go.kr/ms/map/NlipMap.do' },
+  { id: 'sp2', title: '오픈 API', desc: '사용자가 직접 공간정보와 관련된 응용 서비스 개발', img: "/national-geo-platform/assets/images/open_api.png", link: 'https://map.ngii.go.kr/mi/openKey/openKeyInfo.do' },
+  { id: 'sp3', title: '민원서비스', desc: '국민과 소통을 하기 위한 민원예약, 지도구입, FAQ 등을 제공', img: "/national-geo-platform/assets/images/civil_service.png", link: 'https://map.ngii.go.kr/mi/oprGuide/mapPurchsGuide.do' },
+  { id: 'sp4', title: '긴급 공간정보', desc: '재해·재난 발생시 신속하게 활용할 수 있는 긴급 공간정보 서비스', img: "/national-geo-platform/assets/images/emergency_spatial_info.png", link: 'https://map.ngii.go.kr/ms/disaster/disasterList.do' },
 ];
 
 function LandingPage() {
