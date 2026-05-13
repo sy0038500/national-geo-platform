@@ -96,7 +96,12 @@ function LandingPage() {
           bgImageUrl={bgArchive}
         >
           {archiveData.map(item => (
-            <LabelListCard key={item.id} label={item.label} description={item.desc} />
+            <LabelListCard
+            key={item.id}
+            label={item.label}
+            description={item.desc}
+            link={item.link}
+            />
           ))}
         </SectionLayout>
         
