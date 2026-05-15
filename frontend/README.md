@@ -1,16 +1,66 @@
-# React + Vite
+# 국토정보플랫폼 리뉴얼 프로젝트 (National Land Information Platform)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **"어렵고 복잡한 지도 서비스는 그만! 클릭 한 번으로 확실하게 인지하고 직관적으로 탐색하는 사용자 중심 국토정보플랫폼"**
 
-Currently, two official plugins are available:
+## 1. 프로젝트 소개
+본 프로젝트는 기존 공공기관 국토정보플랫폼의 복잡한 UX/UI를 개선하여, 일반 사용자부터 전문가까지 누구나 직관적으로 서비스를 탐색할 수 있도록 돕는 리디자인 웹 플랫폼입니다. 
+클릭 가능한 요소에 대한 명확한 시각적 피드백 제공과 정보의 계층화를 통해 **사용자의 인지적 부담을 줄이고 서비스 접근성을 높이는 것**을 핵심 목표로 삼았습니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 2. 배포 및 관련 링크
+- **배포된 웹사이트 링크**: [배포 링크 삽입 (예: GitHub Pages URL)](#)
+- **GitHub 리포지토리**: [GitHub 저장소 링크 삽입](#)
+- **Figma 시안 링크**: [Figma 디자인 링크 삽입](#)
 
-## React Compiler
+## 3. 사용 기술 스택
+- **프레임워크 및 라이브러리**: React, Vite, React Router
+- **스타일링**: Vanilla CSS, Semantic HTML5
+- **배포 및 관리**: GitHub Pages, Git
+- **기타**: JavaScript (ES6+)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 4. 사용자 작업 흐름 (User Task Flow)
+기존 탐색 과정에서 겪던 피로도와 혼란을 해소하기 위해 새롭게 정의된 탐색 흐름입니다.
 
-## Expanding the ESLint configuration
+> **플랫폼 접속 → 정보 및 기능 탐색 → Hover 등 시각적 피드백 인지 → 클릭(상호작용) → 상세 서비스 진입 → 목표 달성**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+모든 클릭 요소에 시각적 단서를 제공하여 사용자가 **'어디를 클릭해야 하는지'**, **'어떤 서비스인지'** 즉시 판단하고 행동으로 옮길 수 있도록 유도합니다.
+
+## 5. AI 활용 및 개발 워크플로우
+- **AI 기반 PRD 분석**: 제공된 제품 요구사항 정의서(PRD)를 AI를 통해 심층 분석하여 UX 문제(행동, 구조, 인지)를 도출하고 개발 전략 수립.
+- **컴포넌트 주도 개발**: Figma 디자인 시안(노드 618:820)을 바탕으로 Pixel-perfect UI를 구현하기 위한 모듈화된 React 컴포넌트 아키텍처 설계.
+- **이슈 해결 및 최적화 워크플로우**: 로컬 개발(Vite) $\rightarrow$ 컴포넌트 분리 및 스타일링 $\rightarrow$ GitHub Pages 배포 $\rightarrow$ 경로 및 한글 에셋 파일명 인코딩에 따른 404 에러 트러블슈팅 $\rightarrow$ 안정적인 서비스 배포 완료.
+
+## 6. 핵심 구현 기능
+1. **즉각적인 Hover 인터랙션 피드백**: 버튼, 링크, '더보기' 등 모든 상호작용 가능한 요소에 색상 변화 등 시각적 피드백을 적용하여 사용자 인지성 향상.
+2. **정보의 시각적 구분 강화**: `HorizontalCard`, `VerticalCard`, `LabelListCard` 등 다양한 카드형 UI 컴포넌트를 활용하여 복잡한 정보 그룹의 시각적 위계를 명확히 분리.
+3. **직관적인 퀵 메뉴 (Quick Menu) 연동**: 국가기준점, 항공사진 등 핵심 외부 서비스로 곧바로 연결되는 아이콘 기반의 네비게이션 기능 구현.
+4. **웹 접근성(A11y) 준수**: 키보드 내비게이션 사용자를 위한 `focus` 상태 시각화 적용 및 시맨틱 마크업 구성.
+
+## 7. 디렉토리 구조
+```text
+src/
+├── assets/                  # 프로젝트 전역 이미지 및 아이콘
+├── components/              # 재사용 가능한 UI 컴포넌트 모음
+│   ├── Header.jsx           # 전역 헤더
+│   ├── HeroCarousel.jsx     # 메인 배너 캐러셀
+│   ├── HorizontalCard.jsx   # 가로형 콘텐츠 카드
+│   ├── LabelListCard.jsx    # 라벨이 포함된 리스트 카드
+│   ├── QuickMenuSection.jsx # 빠른 접근 메뉴 섹션
+│   ├── SectionLayout.jsx    # 섹션별 공통 레이아웃 래퍼
+│   └── VerticalCard.jsx     # 세로형 콘텐츠 카드
+├── pages/                   # 라우팅 적용 페이지
+│   ├── FullMenuPage.jsx     # 전체 메뉴 페이지
+│   ├── LandingPage.jsx      # 메인 랜딩 페이지
+│   └── SpatialInfoPage.jsx  # 공간정보 상세 페이지
+├── App.jsx                  # 최상위 컴포넌트 (라우팅 및 구조)
+├── index.css                # 글로벌 CSS 및 CSS 변수 설정
+└── main.jsx                 # React 진입점
+
+public/
+├── assets/
+│   └── images/              # 배포 환경에서 서비스될 이미지 에셋
+└── ...
+```
+
+## 8. 회고 및 인사이트
+- **기술적 성장**: 정적 웹 사이트를 GitHub Pages에 배포하는 과정에서, 빌드(Dist) 경로 설정 및 에셋(이미지) 절대/상대 경로 문제로 인한 404 에러를 겪었습니다. 또한, 한글 파일명이 URL 인코딩 과정에서 문제를 일으킨다는 점을 파악하고 영문으로 에셋을 최적화하면서, 프론트엔드 환경에서의 에셋 파이프라인 관리의 중요성을 체감했습니다.
+- **UX 중심의 개발 경험**: PRD를 기반으로 단순히 "예쁜 디자인"을 넘어서, 작은 Hover/Focus 피드백과 여백(Structure) 설정이 공공 서비스의 사용성에 얼마나 큰 영향을 미치는지 깨달았습니다. 기술적인 구현력을 바탕으로 사용자의 인지적 부하를 최소화하는 방향으로 고민하는 개발자로 한 단계 성장하는 계기가 되었습니다.
