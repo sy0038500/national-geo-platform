@@ -63,3 +63,8 @@ main {
   object-fit: contain;
   display: block;
 }
+
+.site-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
