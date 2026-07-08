@@ -13,7 +13,10 @@ export default function VerticalCard({ title, description, imageUrl, link = '#' 
       >
         {/* 상단 아이콘 */}
         <div className="v-card-icon-wrapper">
-          <img src={imageUrl} alt="" className="v-card-icon" aria-hidden="true" />
+          <img src={imageUrl}
+          alt=""
+          className={`v-card-icon ${title === '업무지원' ? 'is-work-support' : ''}`}
+          aria-hidden="true" />
         </div>
         
         {/* 중앙 타이틀 및 하단 설명 */}
